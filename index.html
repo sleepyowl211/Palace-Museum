@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+<title>The Palace Museum</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+<!-- Reference
+1. https://www.w3schools.com/howto/howto_js_topnav_responsive.asp
+2. https://www.w3schools.com/howto/howto_css_column_cards.asp
+3. https://codepen.io/HenrikFricke/pen/eYByWPw
+4. https://www.w3schools.com/howto/howto_js_slideshow.asp
+
+-->
+</head>
+
+<body>
+    <img src="images/logo.png" alt="logo" id="home">
+    <div class="topnav sticky" id="myTopnav">
+        <a href="index.html" id="nav-title">Home</a>
+        <a href="#visit">Visit</a>
+        <a href="#exhibitions">Exhibitions</a>
+        <a href="#collections">Collections</a>
+        <a href="#explore">Explore</a>
+        <a href="#multimedia">Multimedia</a>
+        <div class="search-container">
+            <form action="">
+              <input type="text" placeholder="Search" name="search">
+              <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+
+        <a href="javascript:void(0);" class="icon" onclick="topNav()">
+            <i class="fa fa-bars"></i>
+        </a>
+        <a class="icon" id="search-icon">
+            <i class="fa fa-search"></i>
+        </a>
+    </div>
+
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="images/ex1.jpeg" alt="exhibition information 1">
+        </div>
+            
+        <div class="mySlides fade">
+            <img src="images/ex2.jpeg" alt="exhibition information 2">
+        </div>
+        
+        <div class="mySlides fade">
+            <img src="images/ex3.jpeg" alt="exhibition information 3">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="images/ex4.jpeg" alt="exhibition information 4">
+        </div>
+            
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+    
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+        <span class="dot" onclick="currentSlide(4)"></span> 
+    </div>
+
+    <h1>News & Featured</h1>
+    <div class="featured">
+        <a href="https://en.dpm.org.cn/about/news/2015-06-12/2105.html " target="_blank" class="feature" style="background-image: url('images/ft3.jpeg');">
+            <div class="inner">
+              <h2 class="feature-title">New Daily Limit of 24,000 Visitors and Online Ticketing</h2>
+            </div>
+        </a>
+        <a href="https://en.dpm.org.cn/home3/2015-01-20/1628.html" target="_blank" class="feature" style="background-image: url('images/ft2.jpeg');">
+            <div class="inner">
+              <h2 class="feature-title">Optimal Visiting Times and Dates to Avoid</h2>
+            </div>
+        </a>
+        <a href="https://en.dpm.org.cn/icom-itc/" target="_blank" class="feature" style="background-image: url('images/ft1.jpeg');">
+            <div class="inner">
+              <h2 class="feature-title">ICOM International Training Centre for Museum Studies</h2>
+            </div>
+        </a>
+        <a href="https://en.dpm.org.cn/about/news/2022-06-23/3325.html" target="_blank" class="feature" style="background-image: url('images/ft4.jpeg');">
+            <div class="inner">
+              <h2 class="feature-title">The Palace Museum Taihe Visiting Scholar Fellowship Programme Application Announcement</h2>
+            </div>
+        </a>
+    </div>
+    
+    <h1>Site Map</h1>
+    <div class="guide">
+        <div class="row">
+            <div class="column">
+                <div id="about" class="card" style="background-image: url('images/bg1.jpeg');">
+                    <h3>About</h3>
+                    <ul>
+                        <li><a href="">About the Museum</a></li>
+                        <li><a href="">News Release</a></li>
+                        <li><a href="">News Photos</a></li>
+                        <li><a href="">Departments</a></li>
+                        <li><a href="">Administration</a></li>
+                        <li><a href="">Academic Organizations</a></li>
+                        <li><a href="">Annual Reports</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="column">
+                <div id="visit" class="card" style="background-image: url('images/bg2.jpeg');">
+                    <h3>Visit</h3>
+                    <ul>
+                        <li><a href="">Hour</a></li>
+                        <li><a href="">Tickets</a></li>
+                        <li><a href="">Location Temporary</a></li>
+                        <li><a href="">Closure Regulations & Suggestions</a></li>
+                        <li><a href="">Recommended Tours</a></li>
+                        <li><a href="">Facilities</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="column">
+                <div id="exhibitions" class="card" style="background-image: url('images/bg3.jpeg');">
+                    <h3>Exhibitions</h3>
+                    <ul>
+                        <li><a href="">All Exhibitions</a></li>
+                        <li><a href="">Travel Exhibition</a></li>
+                        <li><a href="">Galleries</a></li>
+                        <li><a href="">Period Halls</a></li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="column">
+                <div id="collections" class="card" style="background-image: url('images/bg4.jpeg');">
+                    <h3>Collections</h3>
+                    <ul>
+                        <li><a href="">Daily Feature</a></li>
+                        <li><a href="">Collections</a></li>
+                        <li><a href="">Architecture</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="column">
+                <div id="explore" class="card" style="background-image: url('images/bg5.jpeg');">
+                    <h3>Explore</h3>
+                    <ul>
+                        <li><a href="">People</a></li>
+                        <li><a href="">Artworks</a></li>
+                        <li><a href="">Culture</a></li>
+                        <li><a href="">Timeline of the Ming & Qing Palace Events</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="column">
+                <div id="multimedia" class="card" style="background-image: url('images/bg6.jpeg');">
+                    <h3>Multimedia</h3>
+                    <ul>
+                        <li><a href="">Applications</a></li>
+                        <li><a href="">Wallpaper</a></li>
+                        <li><a href="">Virtual Tours</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div>
+            <p> © 2001-2022 The Palace Museum </p>
+            <a href="https://en.dpm.org.cn/is/" target="_blank">Image Services</a>
+            <a href="https://en.dpm.org.cn/bottom/2015-01-20/1507.html" target="_blank">Terms & Conditions</a>
+            <a href="https://en.dpm.org.cn/bottom/2015-01-20/1506.html" target="_blank">Privacy Policy</a>
+            <a href="https://en.dpm.org.cn/bottom/2015-01-20/1505.html" target="_blank">Contact us</a>
+        </div>
+    </footer>
+
+<script src="control.js"></script>
+</body>
+
+</html>
